@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const ButtonContainer = styled.button`
     width: 100%;
     height: 42px;
@@ -14,4 +13,11 @@ export const ButtonContainer = styled.button`
         opacity: 0.6;
         cursor:pointer;
     }
-`
+
+    :disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+        z-index: 0;
+    }
+
+`;

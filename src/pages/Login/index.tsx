@@ -28,6 +28,7 @@ const Login = () => {
     reValidateMode: "onChange",
   });
 
+
   return (
     <Container>
       <LoginContainer>
@@ -36,7 +37,7 @@ const Login = () => {
           <Spacing />
           <Input
             name="email"
-            placeholder="Email"
+           placeholder="Email"
             control={control}
             errorMessage={errors?.email?.message}
           />
@@ -49,7 +50,7 @@ const Login = () => {
             errorMessage={errors?.password?.message}
           />
           <Spacing />
-          <Button title="Entrar" />
+          <Button title="Entrar" disabled={!isValid} onClick={() => console.log("é válido")}/>
         </Column>
       </LoginContainer>
     </Container>
